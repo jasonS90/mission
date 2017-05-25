@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mission.title %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @mission.category %>
+</p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @mission.payment %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @mission.address %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%= @mission.file %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mission.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @mission.user %>
+</p>
+
+<p>
+  <strong>Select:</strong>
+  <%= @mission.select %>
+</p>
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>

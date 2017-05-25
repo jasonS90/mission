@@ -1,0 +1,57 @@
+<%= form_with(model: mission, local: true) do |form| %>
+  <% if mission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mission.errors.count, "error") %> prohibited this mission from being saved:</h2>
+
+      <ul>
+      <% mission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :mission_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.number_field :category, id: :mission_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payment %>
+    <%= form.number_field :payment, id: :mission_payment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.number_field :address, id: :mission_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.text_field :file, id: :mission_file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :mission_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :mission_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :select %>
+    <%= form.number_field :select, id: :mission_select %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
